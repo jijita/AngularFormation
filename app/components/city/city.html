@@ -1,0 +1,24 @@
+<div ng-controller='cityController' ng-cloak class="navBardemoBasicUsage">
+  <md-content class="md-padding">
+    <div class="ext-content">
+      <p align="center">
+        <input type="text" ng-model="cityName" id="textData" placeholder="Enter Your City Name">
+        <input class="myBtn" type="button" value="GetDetails" ng-click="funGetCity();">
+      </p>
+      <div>
+        <h1 align="center">{{ cityName }}</h1>
+        <hr />
+        <p align="center"> <img src="http://openweathermap.org/img/w/{{ imgCode }}.png"> </p>
+        <h1 align="center" class="cityName"> Today is : {{ tmp | number : 1 }}°C </h1>
+        <p align="center">
+
+          <span class="temp"> Min Temp : {{minTemp | number : 1 }}°C </span>
+          <br>
+          <span class="temp">
+            Max Temp : {{maxTemp | number : 1 }}°C </span> </p>
+        <br>
+      </div>
+    </div>
+  </md-content>
+
+</div>
